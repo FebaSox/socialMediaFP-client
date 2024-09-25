@@ -16,7 +16,7 @@ function Login() {
     const data = { username, password };
 
     try {
-      const response = await axios.post("http://localhost:3001/auth/login", data);
+      const response = await axios.post("https://full-stack-api-seba-64cbfb4f643c.herokuapp.com/auth/login", data);
       if (response.data.error) {
         setErrorMessage(response.data.error); // Set error message from server
       } else {
